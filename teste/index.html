@@ -14,7 +14,7 @@
 
         body {
             height: 100vh;
-            background-image: url('https://i.ibb.co/Wyh3TDc/scrnli-qfa0-Vo-GLL63j-P0.png');
+            background-image: url('https://imagex.com');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -55,7 +55,8 @@
             justify-content: space-around;
         }
 
-        .buttons a {
+        .buttons a, .close-btn {
+            pointer-events: none; /* Remove o efeito de link */
             text-decoration: none;
             color: white;
             background: #007bff;
@@ -65,7 +66,7 @@
             transition: background 0.3s;
         }
 
-        .buttons a:hover {
+        .buttons a:hover, .close-btn:hover {
             background: #0056b3;
         }
 
@@ -78,6 +79,11 @@
             font-size: 16px;
             cursor: pointer;
             color: #333;
+        }
+
+        /* Removendo o comportamento de abrir em nova guia */
+        .buttons a, .close-btn {
+            cursor: pointer;
         }
     </style>
 </head>
