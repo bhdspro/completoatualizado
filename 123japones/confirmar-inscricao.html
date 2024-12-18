@@ -1,0 +1,87 @@
+	<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+		
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Projeto Japonês 2025 - 123 Japonês</title>
+	    <style>
+		body {
+		    font-family: Arial, sans-serif;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    height: 100vh;
+		    margin: 0;
+		}
+
+		.container {
+		    display: flex;
+		    align-items: center;
+		}
+
+		.circle {
+		    width: 30px;
+		    height: 30px;
+		    border: 4px solid green; /* Borda verde ao redor */
+		    border-top: 4px solid transparent; /* Parte superior transparente para criar o efeito de carregamento */
+		    border-radius: 50%; /* Faz com que seja um círculo */
+		    animation: spin 1s linear infinite; /* Animação de rotação */
+		    margin-right: 10px;
+		}
+
+		@keyframes spin {
+		    0% { transform: rotate(0deg); }
+		    100% { transform: rotate(360deg); }
+		}
+
+		.text {
+		    font-size: 30px;
+		    color: black;
+		}
+
+		/* Media query para dispositivos móveis */
+		@media (max-width: 768px) {
+		    .container {
+		        flex-direction: column; /* Coloca o círculo acima do texto */
+		    }
+
+		    .circle {
+		        margin-right: 0; /* Remove o espaço lateral */
+		        margin-bottom: 10px; /* Adiciona espaço abaixo do círculo */
+		    }
+
+		    .text {
+		        font-size: 24px; /* Ajusta o tamanho da fonte para mobile */
+		        text-align: center;
+		    }
+		}
+	    </style>
+	</head>
+	<body>
+
+	    <div class="container">
+		<div class="circle"></div>
+		<div class="text">Aguarde! Confirmando sua Inscrição no Projeto Japonês 2025</div>
+	    </div>
+
+	    <!-- Iframe invisível -->
+	    <iframe id="hiddenFrame" src="" style="display: none;"></iframe>
+
+	    <script>
+		// Definindo os links com sets
+		const lnkfrm = "https://go.hotmart.com/N87811736G?dp=1&src=pgc";
+		const lnkdtn = "https://api.whatsapp.com/send?phone=5511942572600&text=Ol%C3%A1,%20gostaria%20de%20confirmar%20minha%20inscri%C3%A7%C3%A3o%20para%20o%20Projeto%20Japon%C3%AAs%202025";
+
+		// Carrega o iframe invisível
+		document.getElementById('hiddenFrame').src = lnkfrm;
+
+		// Espera 10 segundos e redireciona
+		setTimeout(function() {
+		    window.location.href = lnkdtn;
+		}, 10000); // 10 segundos
+	    </script>
+
+	</body>
+	</html>
