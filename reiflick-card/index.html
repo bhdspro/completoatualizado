@@ -1,0 +1,454 @@
+<html>
+  
+<!-- Mirrored from reiflick2.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Dec 2024 03:25:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "380271121371050");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Meta Pixel Code -->
+    <script>
+      if (
+        location.protocol !== "https:" &&
+        location.hostname !== "localhost" &&
+        location.hostname !== "127.0.0.1"
+      ) {
+        location.replace(
+          `https://${location.hostname}${location.pathname}${location.search}`
+        );
+      }
+      window.onload = function () {
+        // Captura todos os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let utmSource = urlParams.get("utm_source");
+
+        // Se não houver utm_source, pega o primeiro parâmetro disponível
+        if (!utmSource && urlParams.entries().next().value) {
+          utmSource = urlParams.entries().next().value[0];
+        }
+
+        // Verifica se encontrou algum parâmetro válido
+        if (utmSource) {
+          // Seleciona todos os links de compra
+          const purchaseLinks = document.querySelectorAll(".cta_btn");
+
+          // Adiciona o parâmetro a cada link
+          purchaseLinks.forEach((link) => {
+            link.href += `?utm_source=${utmSource}`;
+          });
+
+          // Atualiza o texto do botão "ENTRE EM CONTATO"
+          const contactButton = document.querySelector(".signin__button");
+          contactButton.setAttribute(
+            "onclick",
+            `window.location.href='https://wa.me/43991768151?text=Ola%20vim%20do%20${utmSource}';`
+          );
+        }
+      };
+    </script>
+
+    <meta property="og:title" content="Reiflick " />
+    <meta
+      property="og:description"
+      content="Assista Reiflick filmes & TV online! direto da sua smart TV e celular"
+    />
+    <meta
+      property="og:image"
+      content="https://reiflick2.vercel.app/images/logo.webp"
+    />
+    <meta property="og:url" content="https://reiflick2.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/pricing.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>REIFLICK - Assista filmes, séries e todos canais</title>
+    <link rel="icon" href="images/logo.webp" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__brand">
+          <img
+            src="images/logo.webp"
+            alt="logo"
+            class="brand__logo"
+            style="width: 150px; height: auto"
+          />
+        </div>
+
+        <div class="navbar__nav__items">
+          <div class="nav__item">
+            <button
+              class="signin__button"
+              onclick="window.location.href='https://wa.me/43991768151?text=Ola%20vim%20do%20site%20quero%20ajuda';"
+            >
+              ENTRE EM CONTATO
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__bg__image__container">
+          <img
+            src="images/backgroundreiflick.png"
+            alt="BG hero image"
+            class="hero__bg__image"
+          />
+        </div>
+        <div class="hero__bg__overlay"></div>
+
+        <div class="hero__card">
+          <h1 class="hero__title">
+            TENHA MAIS DE 2 MIL CANAIS! E ACESSO A TODOS OS STREAMINGS!
+          </h1>
+          <p class="hero__description">
+            FILMES,SÉRIES, FUTEBOL, ANIME, DORAMAS E MAIS!
+          </p>
+        </div>
+      </section>
+      <!-- <section class="discount__section">
+        <div class="discount__image__container">
+          <img
+            src="./images/desconto.webp"
+            alt="Desconto"
+            class="discount__image"
+          />
+        </div>
+      </section> -->
+
+      <section class="features__container">
+        <div class="container2">
+          <div class="grid">
+            <div class="card highlight">
+              <h2 class="card_title">Mensal</h2>
+              <p class="pricing">
+                <span class="old-price">R$ 24,99</span>
+              </p>
+              <p class="pricing">
+                <span class="new-price">R$ 19,90</span>
+              </p>
+              <ul class="features">
+                <li>3 telas</li>
+                <li>1 Mês de acesso</li>
+                <li>+100.000 Conteúdos</li>
+                <li>Qualidade HD/SD/FHD e 4K</li>
+                <li>Assista no Smartphone/Tablet</li>
+                <li>Assista na Smart TV</li>
+                <li>Canais, Filmes, Séries, Futebol, anime e dorama</li>
+                <li>Canais Adultos</li>
+              </ul>
+              <a
+                href="https://pay.kirvano.com/6026d4be-6c16-4869-85e7-b49181f23523"
+                class="cta_btn"
+                >COMPRAR AGORA</a
+              >
+            </div>
+            <div class="card highlight">
+              <h2 class="card_title">Trimestral</h2>
+              <p class="pricing">
+                <span class="old-price">R$ 59,70</span>
+              </p>
+              <p class="pricing">
+                <span class="new-price">R$ 39,90</span>
+              </p>
+
+              <ul class="features">
+                <li>3 telas</li>
+                <li>3 Meses de acesso</li>
+                <li>+100.000 Conteúdos</li>
+                <li>Qualidade HD/SD/FHD e 4K</li>
+                <li>Assista no Smartphone/Tablet</li>
+                <li>Assista na Smart TV</li>
+                <li>Canais, Filmes, Séries, Futebol, anime e dorama</li>
+                <li>Canais Adultos</li>
+              </ul>
+              <a
+                href="https://pay.kirvano.com/17344977-6382-47de-aa1a-021740143d2d"
+                class="cta_btn"
+                >COMPRAR AGORA</a
+              >
+            </div>
+
+            <div class="card highlight recommended">
+              <h2 class="card_title">Semestral</h2>
+              <p class="pricing">
+                <span class="old-price">R$ 119,40</span>
+              </p>
+              <p class="pricing">
+                <span class="new-price">R$ 69,90</span>
+              </p>
+              <ul class="features">
+                <li>3 telas</li>
+                <li>6 meses de acesso</li>
+                <li>+100.000 Conteúdos</li>
+                <li>Qualidade HD/SD/FHD e 4K</li>
+                <li>Assista no Smartphone/Tablet</li>
+                <li>Assista na Smart TV</li>
+                <li>Canais, Filmes, Séries, Futebol, anime e dorama</li>
+                <li>Canais Adultos</li>
+              </ul>
+              <a
+                href="https://pay.kirvano.com/391cb7e8-9744-49d2-84ae-7b4aef946081"
+                class="cta_btn"
+                >COMPRAR AGORA</a
+              >
+              <div class="badge">Mais Popular</div>
+              <!-- Adicionando o selo de destaque -->
+            </div>
+
+            <div class="card highlight">
+              <h2 class="card_title">Anual</h2>
+              <p class="pricing">
+                <span class="old-price">R$ 238,80</span>
+              </p>
+              <p class="pricing">
+                <span class="new-price">R$ 129,90</span>
+              </p>
+              <ul class="features">
+                <li>4 telas</li>
+                <li>12 meses de acesso</li>
+                <li>+100.000 Conteúdos</li>
+                <li>Qualidade HD/SD/FHD e 4K</li>
+                <li>Assista no Smartphone/Tablet</li>
+                <li>Assista na Smart TV</li>
+                <li>Canais, Filmes, Séries, Futebol, anime e dorama</li>
+                <li>Canais Adultos</li>
+              </ul>
+              <a
+                href="https://pay.kirvano.com/10c9b8cd-0202-4e77-86fe-9c63fbe0c613"
+                class="cta_btn"
+                >COMPRAR AGORA</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features__container">
+        <!-- Feature 1 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">
+              Catálogo completo que reúne mais de 60.000 mil filmes e séries.
+            </h3>
+          </div>
+          <!-- <div class="feature__image__container">
+            <img
+              src="./images/muitosfilmes.webp"
+              alt="Feature image"
+              class="feature__image"
+            />
+          </div> -->
+        </div>
+        <!-- Feature 2 -->
+        <!-- <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">
+              BRASILEIRÃO, CHAMPIONS, UFC E MAIS... Tenha acesso a todos os
+              canais ESPORTIVOS!
+            </h3>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="./images/futebol.webp"
+              alt="Feature image"
+              class="feature__image"
+            />
+          </div>
+        </div> -->
+        <!-- Feature 3 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">
+              AQUI VOCÊ ENCONTRA OS LANÇAMENTOS MAIS RECENTES
+            </h3>
+          </div>
+          <!-- <div class="feature__image__container feature__3__image__container">
+            <img
+              src="./images/filmesnovos.webp"
+              alt="Feature image"
+              class="feature__image feature__3__image"
+            />
+          </div> -->
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">TEMOS 36 CANAIS ADULTOS + 18 xxx</h3>
+            <h5 class="feature__sub__title">
+              CASO VOCÊ QUEIRA RETIRAR ENTRE EM CONTATO COM O SUPORTE APÓS A
+              COMPRA! O PIN É 0000 PARA ACESSAR!
+            </h5>
+          </div>
+          <!-- <div class="feature__image__container">
+            <img
+              src="./images/adulto.webp"
+              alt="Feature image"
+              class="feature__image"
+            />
+          </div> -->
+        </div>
+      </section>
+
+      <section class="FAQ__list__container">
+        <h1 class="FAQ__heading">PERGUNTAS FREQUENTES</h1>
+        <div class="FAQ__list">
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              PRECISA DE INTERNET PARA FUNCIONAR?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                Sim, o App REIFLICK precisa de internet para o seu
+                funcionamento, mas devido o sinal potencializado de nosso
+                satélite próprio, uma internet básica é mais que o suficiente
+                para rodar videos 4k.
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              O PAGAMENTO É MENSAL?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>Sim, nós trabalhamos com 4 planos R$19,90 mensal</p>
+              <p>R$39,90 trimestral</p>
+              <p>R$69,90 semestral</p>
+              <p>e o mais econômico o anual R$ 129,90!!</p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              COMO VOU RECEBER?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                OS DADOS DE ACESSO CHEGAM IMEDIATAMENTE APÓS A COMPRA! POR
+                WHATSAPP E POR E-MAIL!
+              </p>
+              <p>
+                JUNTO COM UM GUIA DE INSTALAÇÃO! QUALQUER DÚVIDA ENTRAR EM
+                CONTATO COM O NOSSO SUPORTE PELO WHATSAPP
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              EM QUANTOS APARELHOS POSSO USAR?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                Nossos planos tem capacidade para 3 telas simultâneas e no anual
+                pode usar 4 TELAS!!!
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              PRECISA DE ESPECIALISTA PARA CONFIGURAR?<i
+                class="fal fa-plus"
+              ></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                NÃO, nosso sistema é muito simples de instalar, ensinamos passo
+                a passo para você, qualquer dúvida temos uma equipe para te
+                ajudar!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer>
+      <div class="footer__row__1">
+        <h4>Questions? Call 000-800-040-1843</h4>
+      </div>
+      <div class="footer__row__2">
+        <div class="column__1">
+          <p>FAQ</p>
+          <p>Investor Relations</p>
+          <p>Privacy</p>
+          <p>Speed Test</p>
+        </div>
+        <div class="column__2">
+          <p>Help Centre</p>
+          <p>Jobs</p>
+          <p>Cookie Preferences</p>
+          <p>Legal Notices</p>
+        </div>
+        <div class="column__3">
+          <p>Account</p>
+          <p>Ways to Watch</p>
+          <p>Corporate Information</p>
+          <p>Only on Netflix</p>
+        </div>
+        <div class="column__4">
+          <p>Media Centre</p>
+          <p>Terms of Use</p>
+          <p>Contact Us</p>
+        </div>
+      </div>
+      <div class="footer__row__3">
+        <div class="dropdown__container">
+          <i class="fas fa-globe"></i>
+          <select
+            name="languages"
+            id="languagesSelect"
+            class="language__drop__down"
+          >
+            <option value="english" selected>English</option>
+            <option value="hindi">हिन्दी</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer__row__4">
+        <p>REIFLICK</p>
+      </div>
+    </footer> -->
+
+    <script src="src/index.js"></script>
+  </body>
+
+<!-- Mirrored from reiflick2.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Dec 2024 03:25:41 GMT -->
+</html>
